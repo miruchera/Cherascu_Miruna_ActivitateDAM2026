@@ -45,9 +45,9 @@ public class ActivitateRezultat extends AppCompatActivity {
         Intent it = new Intent();
         it.putExtra("mesaj", mesaj);
         it.putExtra("suma", suma);
-        //vreau sa inchid activitatea, dar inainte sa o inchid vreau sa setez rezultatul
+        //inchid activitatea, dar inainte sa o inchid setez rezultatul
         setResult(RESULT_OK, it);
-        //iar acum o inchid
+        //iar acum se inchide
         finish();
     }
 }
