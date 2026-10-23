@@ -1,5 +1,5 @@
 package com.example.laborator4;
-
+//actualizare c sursa
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
