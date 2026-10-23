@@ -16,7 +16,7 @@
             android:id="@+id/tvTitlu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/adauga_o_floare_noua"
+            android:text="Adaugă un medicament nou"
             android:textSize="24sp"
             android:textStyle="bold"
             android:textColor="#2C3E50"
@@ -28,7 +28,7 @@
             android:id="@+id/etDenumire"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="@string/denumire_floare"
+            android:hint="Denumire medicament"
             android:layout_marginTop="24dp"
             android:background="@android:drawable/editbox_background"
             app:layout_constraintTop_toBottomOf="@id/tvTitlu" />
@@ -37,7 +37,7 @@
             android:id="@+id/cbSpini"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/floarea_are_spini"
+            android:text="Are efecte secundare?"
             android:layout_marginTop="16dp"
             app:layout_constraintTop_toBottomOf="@id/etDenumire" />
 
@@ -45,7 +45,7 @@
             android:id="@+id/tvMediu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/mediu_de_crestere"
+            android:text="Mod de administrare"
             android:layout_marginTop="16dp"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/cbSpini"
@@ -62,7 +62,7 @@
                 android:id="@+id/rbGradina"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/gradina"
+                android:text="Oral (Pastile/Sirop)"
                 android:checked="true"
                 android:layout_weight="1"/>
 
@@ -70,7 +70,7 @@
                 android:id="@+id/rbGhiveci"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/ghiveci"
+                android:text="Injectabil / Local"
                 android:layout_weight="1"/>
         </RadioGroup>
 
@@ -78,7 +78,7 @@
             android:id="@+id/tvCuloare"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/culoare_dominanta"
+            android:text="Culoare ambalaj / pastilă"
             android:layout_marginTop="16dp"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/rgMediu"
@@ -96,7 +96,7 @@
             android:id="@+id/tvRating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/rating_aspect_parfum"
+            android:text="Rating eficiență"
             android:layout_marginTop="16dp"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/spinnerCuloare"
@@ -117,7 +117,7 @@
             android:id="@+id/swPerena"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/este_o_planta_perena"
+            android:text="Necesită rețetă medicală?"
             android:layout_marginTop="24dp"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/ratingBar" />
@@ -126,7 +126,7 @@
             android:id="@+id/btnSalvare"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="@string/adauga_floare"
+            android:text="Adaugă medicament"
             android:textSize="18sp"
             android:layout_marginTop="32dp"
             app:layout_constraintTop_toBottomOf="@id/swPerena" />

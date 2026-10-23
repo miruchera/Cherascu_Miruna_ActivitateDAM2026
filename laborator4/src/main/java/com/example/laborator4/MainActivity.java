@@ -38,10 +38,11 @@ public class MainActivity extends AppCompatActivity {
                 new ActivityResultContracts.StartActivityForResult(),
                 result -> {
                     if (result.getResultCode() == RESULT_OK && result.getData() != null) {
-                        Floare floarePrimita = result.getData().getParcelableExtra("floare_key");
+                        // Am schimbat clasa, numele variabilei și cheia
+                        Medicament medicamentPrimit = result.getData().getParcelableExtra("medicament_key");
 
-                        if (floarePrimita != null) {
-                            tvRezultat.setText(floarePrimita.toString());
+                        if (medicamentPrimit != null) {
+                            tvRezultat.setText(medicamentPrimit.toString());
 
                             Toast.makeText(this, "Obiect preluat cu succes!", Toast.LENGTH_SHORT).show();
                         }
@@ -54,4 +55,3 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
-

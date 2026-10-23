@@ -11,7 +11,6 @@ import android.widget.RadioGroup;
 import android.widget.RatingBar;
 import android.widget.Spinner;
 import android.widget.Switch;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,7 +40,7 @@ public class AdaugareActivitate extends AppCompatActivity {
             return insets;
         });
 
-        //leg variabilele de interfata grafica
+        // Leg variabilele de interfața grafică (ID-urile din XML rămân la fel ca să nu se strice layout-ul)
         et = findViewById(R.id.etDenumire);
         cb = findViewById(R.id.cbSpini);
         rg = findViewById(R.id.rgMediu);
@@ -50,11 +49,10 @@ public class AdaugareActivitate extends AppCompatActivity {
         sw = findViewById(R.id.swPerena);
         btn = findViewById(R.id.btnSalvare);
 
-        //construiesc lista derulanta a spinner ului
+        // Construiesc lista derulantă a spinner-ului (se potrivesc culorile și la medicamente)
         String[] culori = {"Roșu", "Alb", "Galben", "Roz", "Violet"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, culori);
         sp.setAdapter(adapter);
-
 
         btn.setOnClickListener(v -> {
 
@@ -64,24 +62,25 @@ public class AdaugareActivitate extends AppCompatActivity {
                 return;
             }
 
-            boolean areSpini = cb.isChecked();
-            boolean estePerena = sw.isChecked();
+            // Adaptăm preluarea datelor la atributele clasei Medicament
+            boolean areEfecteSecundare = cb.isChecked();
+            boolean necesitaReteta = sw.isChecked();
             float rating = rb.getRating();
 
             String culoare = sp.getSelectedItem().toString();
 
             int idSelectat = rg.getCheckedRadioButtonId();
             RadioButton rbSelectat = findViewById(idSelectat);
-            String mediu = rbSelectat.getText().toString();
+            String modAdministrare = rbSelectat.getText().toString();
 
-            Floare floareNoua = new Floare(denumire, areSpini, mediu, culoare, rating, estePerena);
+            // Creăm obiectul Medicament în loc de Floare
+            Medicament medicamentNou = new Medicament(denumire, areEfecteSecundare, modAdministrare, culoare, rating, necesitaReteta);
 
             Intent intent = new Intent();
-            intent.putExtra("floare_key", floareNoua);
+            // Folosim aceeași cheie setată adineauri în MainActivity
+            intent.putExtra("medicament_key", medicamentNou);
             setResult(RESULT_OK, intent);
             finish();
         });
     }
 }
-
-
