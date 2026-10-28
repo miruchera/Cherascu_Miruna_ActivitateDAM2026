@@ -12,4 +12,6 @@
     <string name="rating_aspect_parfum">Rating aspect/parfum</string>
     <string name="este_o_planta_perena">Este o planta perena</string>
     <string name="adauga_floare">Adauga floare</string>
+    <string name="title_activity_lista">ListaActivity</string>
+    <string name="lista_de_medicamente">Lista de medicamente</string>
 </resources>

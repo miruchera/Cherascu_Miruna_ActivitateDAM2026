@@ -18,8 +18,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".AdaugareActivitate" />
+        <activity
+            android:name=".ListaActivity"
+            android:exported="false"
+            android:label="@string/title_activity_lista"
+            android:theme="@style/Theme.S2_DAM2"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>
